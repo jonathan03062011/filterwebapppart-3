@@ -26,15 +26,15 @@ function gotposes(results)
  if(results.length>0)
  {
      console.log(results);
-     mustachex=results[0].pose.mustache.x;
-     mustachey=results[0].pose.mustache.y;
+     mustachex=results[0].pose.nose.x-15;
+     mustachey=results[0].pose.nose.y;
  }
 }
 
 function draw()
 {
  image(video,0,0,300,300);
- image(mustache_filter,mustachex,mustachey,30,30);
+ image(mustache_filter,mustachex,mustachey,40,40);
 }
 
 function take_snapshot()
